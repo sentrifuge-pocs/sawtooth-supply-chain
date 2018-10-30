@@ -13,14 +13,14 @@
 # limitations under the License.
 # -----------------------------------------------------------------------------
 
-# NOTE: Use `volumes` to make: asset_client/public/
+# NOTE: Use `volumes` to make: client/public/
 # available at: /usr/local/apache2/htdocs/
 
 FROM httpd:2.4
 
 RUN echo "\
 \n\
-ServerName asset_client\n\
+ServerName client\n\
 AddDefaultCharset utf-8\n\
 LoadModule proxy_module modules/mod_proxy.so\n\
 LoadModule proxy_http_module modules/mod_proxy_http.so\n\

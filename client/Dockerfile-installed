@@ -15,21 +15,21 @@
 
 FROM node:8 AS static_builder
 
-WORKDIR /supply_chain/asset_client
-COPY asset_client/package.json .
+WORKDIR /supply_chain/client
+COPY client/package.json .
 RUN npm install
 
 COPY protos/ ../protos/
-COPY asset_client/ .
+COPY client/ .
 RUN npm run build
 
 FROM httpd:2.4
 
-COPY --from=static_builder /supply_chain/asset_client/public/ /usr/local/apache2/htdocs/
+COPY --from=static_builder /supply_chain/client/public/ /usr/local/apache2/htdocs/
 
 RUN echo "\
 \n\
-ServerName asset_client\n\
+ServerName client\n\
 AddDefaultCharset utf-8\n\
 LoadModule proxy_module modules/mod_proxy.so\n\
 LoadModule proxy_http_module modules/mod_proxy_http.so\n\

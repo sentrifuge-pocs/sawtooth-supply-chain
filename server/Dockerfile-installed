@@ -43,7 +43,7 @@ COPY server/package.json .
 RUN npm install
 
 #Copy client sample data for script use
-COPY asset_client/sample_data/ ../asset_client/sample_data/
+COPY client/sample_data/ ../client/sample_data/
 
 COPY protos/ ../protos/
 COPY server/ .

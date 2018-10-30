@@ -71,12 +71,12 @@ services:
       - VALIDATOR_URL=tcp://validator:4004
       - DB_HOST=rethink
 
-  asset-client:
-    image: supply-asset-client-installed:${ISOLATION_ID}
-    container_name: supply-asset-client-installed
+  client:
+    image: supply-client-installed:${ISOLATION_ID}
+    container_name: supply-client-installed
     build:
       context: .
-      dockerfile: asset_client/Dockerfile-installed
+      dockerfile: client/Dockerfile-installed
     expose:
       - 80
     ports:
