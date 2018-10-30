@@ -54,16 +54,6 @@ services:
       - VALIDATOR_URL=tcp://validator:4004
       - DB_HOST=rethink
 
-  fish-client:
-    image: hyperedger/sawtooth-supply-chain-fish-client:0.10
-    container_name: sawtooth-supply-chain-fish-client
-    expose:
-      - 80
-    ports:
-      - '80:80'
-    depends_on:
-      - server
-
   shell:
     image: hyperledger/sawtooth-supply-chain-shell:0.10
     container_name: sawtoot-supply-chain-shell
@@ -77,15 +67,12 @@ services:
     command: |
       bash -c "
         cd asset_client/ && npm run build && cd - &&
-        cd fish_client/ && npm run build && cd - &&
         if [ ! -f /root/.sawtooth/keys/root.priv ]; then
           sawtooth keygen &&
           cd server/ &&
           npm run init &&
           npm run make-asset &&
-          npm run make-fish &&
           npm run seed-sample-assets &&
-          npm run seed-sample-fish &&
           cd - &&
           tail -f /dev/null
         fi;"
