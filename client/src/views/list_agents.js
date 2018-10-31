@@ -53,10 +53,10 @@ const AgentList = {
         m(Table, {
           headers: [
             'Name',
-            'Key',
+            'Role',
+            'Public Key',
             'Owns',
-            'Custodian',
-            'Reports'
+            'Custodian'
           ],
           rows: vnode.state.filteredAgents.slice(
               vnode.state.currentPage * PAGE_SIZE,
@@ -64,10 +64,10 @@ const AgentList = {
             .map((agent) => [
               m(`a[href=/agents/${agent.key}]`, { oncreate: m.route.link },
                 truncate(agent.name, { length: 32 })),
-              truncate(agent.key, { length: 32 }),
+              agent.role,
+              truncate(agent.key, { length: 16 }),
               agent.owns.length,
-              agent.custodian.length,
-              agent.reports.length
+              agent.custodian.length
             ]),
           noRowsText: 'No agents found'
         })

@@ -74,6 +74,7 @@ const listQuery = filterQuery => block => {
     .map(agent => r.expr({
       'name': getName(agent),
       'key': getPublicKey(agent),
+      'role': fetchRoleString(getPublicKey(agent)),
       'owns': getTable('records', block)
         .filter(isRecordOwner(agent))
         .map(getRecordId)
@@ -114,12 +115,17 @@ const fetchUser = publicKey => {
 const fetchRole = publicKey => {
   const users = r.table('users')
     .filter(hasPublicKey(publicKey))
-
   return r.branch(
     users.count().eq(1),
     users.pluck('role').nth(0),
     {})
-
+}
+const fetchRoleString = publicKey => {
+  const roleObj = fetchRole(publicKey)
+  return r.branch(
+    roleObj.hasFields(['role']),
+    roleObj('role'),
+    '')
 }
 
 const list = filterQuery => db.queryWithCurrentBlock(listQuery(filterQuery))

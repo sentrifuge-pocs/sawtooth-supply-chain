@@ -59,9 +59,8 @@ const AssetList = {
           headers: [
             'Serial Number',
             'Type',
-            'Added',
-            'Updated',
-            'Updates'
+            'Status',
+            'Created'
           ],
           rows: vnode.state.filteredRecords.slice(
             vnode.state.currentPage * PAGE_SIZE,
@@ -71,11 +70,10 @@ const AssetList = {
                     oncreate: m.route.link
                   }, truncate(rec.recordId, { length: 32 })),
                   getPropertyValue(rec, 'type'),
+                  getPropertyValue(rec, 'status'),
                   // This is the "created" time, synthesized from properties
                   // added on the initial create
-                  formatTimestamp(getOldestPropertyUpdateTime(rec)),
-                  formatTimestamp(getLatestPropertyUpdateTime(rec)),
-                  countPropertyUpdates(rec)
+                  formatTimestamp(getOldestPropertyUpdateTime(rec))
                 ]),
           noRowsText: 'No records found'
         })
