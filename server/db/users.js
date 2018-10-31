@@ -22,7 +22,7 @@ const db = require('./')
 const USER_SCHEMA = {
   username: String,
   password: String,
-  email: /.+@.+\..+/,
+  role: String,
   publicKey: String,
   '?encryptedKey': String,
   '*': null

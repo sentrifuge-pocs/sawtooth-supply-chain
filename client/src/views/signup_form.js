@@ -65,7 +65,7 @@ const userSubmitter = state => e => {
   e.preventDefault()
 
   const keys = transactions.makePrivateKey(state.password)
-  const user = _.assign(keys, _.pick(state, 'username', 'email'))
+  const user = _.assign(keys, _.pick(state, 'username', 'role'))
   user.password = api.hashPassword(state.password)
   const agent = payloads.createAgent(_.pick(state, 'name'))
 
@@ -86,7 +86,7 @@ const SignupForm = {
       m('form', { onsubmit: userSubmitter(vnode.state) },
       m('legend', 'Create Agent'),
       forms.textInput(setter('name'), 'Name'),
-      forms.emailInput(setter('email'), 'Email'),
+      forms.textInput(setter('role'), 'Role'),
       forms.textInput(setter('username'), 'Username'),
       passwordCard(vnode.state),
       m('.container.text-center',

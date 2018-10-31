@@ -142,19 +142,21 @@ const AgentDetailPage = {
 
   view (vnode) {
     const publicKey = _.get(vnode.state, 'agent.publicKey', '')
+    const role = _.get(vnode.state, 'agent.role', '')
+    const username = _.get(vnode.state, 'agent.username', '')
 
     const profileContent = [
       layout.row(privateKeyField(vnode.state)),
       layout.row([
-        editField(vnode.state, 'Username', 'username'),
+        staticField('Username', username),
         passwordField(vnode.state)
-      ]),
-      layout.row(editField(vnode.state, 'Email', 'email'))
+      ])
     ]
 
     return [
       layout.title(_.get(vnode.state, 'agent.name', '')),
       m('.container',
+        layout.row(staticField('Role', role)),
         layout.row(staticField('Public Key', publicKey)),
         publicKey === api.getPublicKey() ? profileContent : null)
     ]

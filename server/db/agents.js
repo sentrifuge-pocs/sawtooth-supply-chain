@@ -98,17 +98,28 @@ const fetchQuery = (publicKey, auth) => block => {
       agent => {
         return r.branch(
           auth,
-          agent.merge(
-            fetchUser(publicKey)),
-          agent)
+          agent.merge(fetchUser(publicKey)),
+          agent.merge(fetchRole(publicKey)))
       })
 }
 
 const fetchUser = publicKey => {
   return r.table('users')
     .filter(hasPublicKey(publicKey))
-    .pluck('username', 'email', 'encryptedKey')
+    .pluck('username', 'role', 'encryptedKey')
     .nth(0)
+}
+
+// TODO: Only merge user info when authed after role is on-chain
+const fetchRole = publicKey => {
+  const users = r.table('users')
+    .filter(hasPublicKey(publicKey))
+
+  return r.branch(
+    users.count().eq(1),
+    users.pluck('role').nth(0),
+    {})
+
 }
 
 const list = filterQuery => db.queryWithCurrentBlock(listQuery(filterQuery))
