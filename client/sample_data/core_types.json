@@ -1,15 +1,114 @@
 [
   {
-    "name": "asset",
+    "name": "mineral",
     "properties": [
         {
-          "name": "type",
+          "name": "tag",
           "dataType": 4,
-          "required": true
+          "required": true,
+          "fixed": true
         },
         {
-          "name": "subtype",
-          "dataType": 4
+          "name": "parent_id",
+          "dataType": 4,
+          "fixed": true
+        },
+        {
+          "name": "parent_tag",
+          "dataType": 4,
+          "fixed": true
+        },
+        {
+          "name": "type",
+          "dataType": 5,
+          "required": true,
+          "fixed": true,
+          "enumOptions": [
+            "Cassiterite",
+            "Cobalt",
+            "Coltan",
+            "Copper",
+            "Diamonds",
+            "Emeralds",
+            "Gold",
+            "Niobium",
+            "Rubies",
+            "Sapphires",
+            "Tin",
+            "Tungsten",
+            "Uranium",
+            "Wolframite"
+          ]
+        },
+        {
+          "name": "status",
+          "dataType": 5,
+          "required": true,
+          "fixed": true,
+          "enumOptions": [
+            "Run-of-Mine",
+            "Low-Grade",
+            "Processed",
+            "Terminated Container",
+            "Chemically Processed",
+            "Smelted",
+            "Refined"
+          ]
+        },
+        {
+          "name": "container",
+          "dataType": 5,
+          "required": true,
+          "fixed": true,
+          "enumOptions": [
+              "Sealed Tamper-Evident Bag",
+              "Sealed 55 Gallon Drum",
+              "Shipping Container"
+          ]
+        },
+        {
+          "name": "origin",
+          "dataType": 5,
+          "required": true,
+          "fixed": true,
+          "enumOptions": [
+            "Angola",
+            "Barundi",
+            "Central African Republic",
+            "China",
+            "Democratic Republic of Congo",
+            "Malaysia",
+            "Republic of Congo",
+            "Rwanda",
+            "South Sudan",
+            "Sudan",
+            "Uganda"
+          ]
+        },
+        {
+          "name": "zone",
+          "dataType": 5,
+          "required": true,
+          "fixed": true,
+          "enumOptions": [
+            "Zone 1",
+            "Zone 2",
+            "Zone 3",
+            "Zone 4",
+            "Zone 5",
+            "Zone 6",
+            "Zone 7",
+            "Zone 8",
+            "Zone 9",
+            "Zone 10",
+            "Zone 11",
+            "Zone 12"
+          ]
+        },
+        {
+          "name": "assay",
+          "dataType": 3,
+          "numberExponent": -6
         },
         {
           "name": "weight",
@@ -19,16 +118,6 @@
         {
           "name": "location",
           "dataType": 7
-        },
-        {
-          "name": "temperature",
-          "dataType": 3,
-          "numberExponent": -6
-        },
-        {
-          "name": "shock",
-          "dataType": 3,
-          "numberExponent": -6
         }
     ]
   }
