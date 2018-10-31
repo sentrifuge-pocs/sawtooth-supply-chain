@@ -114,36 +114,80 @@
 
   "agents": [
     {
-      "username": "nobuo",
-      "password": "nobuo",
-      "publicKey": "02cd3181dbd7d1539f470436ce222c53ab5e514f67809dc0095895e6cdfba97612",
-      "name": "Nobuo",
-      "email": "nobuo@nichia.co.jp",
-      "privateKey": "2f4175fa39e7d2a89884b492d741a494c2b4f1021d3b3deb7c93ab72cc84935c",
-      "encryptedKey": "{\"iv\":\"h7h0uW9NqLB+VaKM7C8gSA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"Kn8J+U0Ko98=\",\"ct\":\"w5bGmngbGIt8QIIi/42gVDujsJNUkGsLwmeminMSYIdQq0i+qWZBz1ZYalxitEsSte7NY/L/UrDcYE6drcAmSOvQNQdIkwFz\"}",
-      "hashedPassword": "slf3UiKJzmcE03wvYFqcHselnMQlDOhhriovzXmGeyk="
+      "username": "miner",
+      "publicKey": "032256bb047d68e5f3f1132535cd43d3335ba47e0dd2d0138ed0fbbf30d4e1986a",
+      "name": "Miner",
+      "role": "Miner",
+      "password": "miner",
+      "privateKey": "43a3d50c3d31b5d0ed2ed4bb0bc3d802cde5f221fe949f7f30987319fc7b586d",
+      "encryptedKey": "{\"iv\":\"g0quIcnfMutJrw9y9jaSZQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"GZJmnIMbBxk=\",\"ct\":\"SU4TRgCXeCKmbrM3WmrvoVpY9tdr+QlAJlgk5IU3QGEcBInxUxu+k/InpPSofMfefmiN0FJdHl8ZAtx+XfdE4ABlnqBbTAqj\"}",
+      "hashedPassword": "ixM6OGiZMXa2E3OIFiR6f001fK5VWZZRnPW1Q+mzVUs="
     },
 
     {
-      "username": "bessie",
-      "password": "bessie",
-      "publicKey": "02fb5b3a093e20e420ecf9c5839215e74c97f49eb51889069eb87bc6f62ceca8dd",
-      "name": "Bessie",
-      "email": "bessie@boeing.biz",
-      "privateKey": "68ca3f7423f76397a27eb1b4185e808b953fc5b82cfa3eb2fd375de1c2e53b4e",
-      "encryptedKey": "{\"iv\":\"KuOUW7sBaqb9LIHdN1uATg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"uiawGO8JPSA=\",\"ct\":\"A2llr54xkkxnrgvkSEDV9jIjoChmivkALO8G9c1tnQxb6qgRUWI/qcYvZxa3VxhjnZSEDeuCavF6yB8+TiPZ+0s7TgfpwfUj\"}",
-      "hashedPassword": "90/BIv+IKk+4K3LY9IwWTEr+oNXXiTUXIMzBQdpUGUw="
+      "username": "trader",
+      "publicKey": "03259e9ff57ea9c13b1acffa151274a1cc70ce97ce0a7f741b177f7fb71b63a1f6",
+      "name": "Trader",
+      "role": "Trader",
+      "password": "trader",
+      "privateKey": "e757097fef6d9bd3e8b03cc3208f7d1658df47b9623b36472f39a84fb7d18a0a",
+      "encryptedKey": "{\"iv\":\"0XC8sQ7uxwUmgQYyNyp6Iw==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"WajL56GRz1o=\",\"ct\":\"L/hWhTkzmYtcnaTEOzvLmJc8gdlKfnVNBhWYPx2uasMaxUnTrLggRVSV2lmwIU2iSUKqSE+YU0M6ztAGWk/OP4/5twSnrYuG\"}",
+      "hashedPassword": "xA42JTyb6H4BAYIvjBla49SzMPP9vCr2N+9bmzj9Cjw="
     },
 
     {
-      "username": "ruggles",
-      "password": "ruggles",
-      "publicKey": "0364edd42bd9b2dea1315e2da820b569665f96e36c44b267ceeac488cfdc03bf61",
-      "name": "Ruggles",
-      "email": "ruggles@kona.me",
-      "privateKey": "86f508f1e4bfd975ce747e38adb6bd8b01e5b80143520710126d4b53118c123c",
-      "encryptedKey": "{\"iv\":\"5/v02joKWVzbQpBJBntsTg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"gebKHyPsM3E=\",\"ct\":\"iWU9myR6SXRO2pQKdaVUhFqHs9yd2P9wxdmOXsVKYZL/qynlYE1HnDoxmlHuhnRBOECOj2akaF4g4f/MZBGcshqWePObn+mH\"}",
-      "hashedPassword": "SyoFXfALbmw/kP1yw4fDSddZHQBkMnX+LTkDj9jWiSo="
+      "username": "transporter",
+      "publicKey": "028770df443907d29d26d438966b00f920f2dab65a191d7ce002cf09fae4c35ed7",
+      "name": "Transporter",
+      "role": "Transporter",
+      "password": "transporter",
+      "privateKey": "f8e8cdaace6d960acf5407896f45eb8c6bc5eabd81196c9916f2ad9c4f4b7901",
+      "encryptedKey": "{\"iv\":\"F/wciZK+IhwdAlIL/ED20g==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"fRWzdrem/48=\",\"ct\":\"0fTHT8hX80PwTEvV4PUQ9Ssf8cVJuVZEwh1Dd6vPdvVLZX4gHZUuPgGrT0bdjsH1kI35iVT13Vwi08ZKRY2tBrWT0chVfIlA\"}",
+      "hashedPassword": "hVVUd/iu18krZj3vNHEkvFCtayjATuZ73MEA2lI4HvY="
+    },
+
+    {
+      "username": "customs",
+      "publicKey": "033ccd4a63178ca8e5a8104639bfdfcfac1eda08f6805399cd989908d4c0fa1a7c",
+      "name": "Customs Officer",
+      "role": "Customs Officer",
+      "password": "customs",
+      "privateKey": "a1c7d43444f67350a60c652fce88737c099664aa7a0e56622cab56dfc56637a8",
+      "encryptedKey": "{\"iv\":\"IBx0i6UNn3VlmI5zVdKjrQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"aWmq18/kr7w=\",\"ct\":\"t+Q+rp045d9DlF52PmkA0GxQKAOtmaE6QRUaXsCeP813Nu//vhikqg8Zx4RkScaMOxnWodSLd/PUcJuP2FqhGM5fp2EXy2ly\"}",
+      "hashedPassword": "ReKFEzuJG8O8Ai/dXtoHJrFbYJOW5bjnNAeKufXM3Ws="
+    },
+
+    {
+      "username": "expediter",
+      "publicKey": "03ce6a53bf74b31d99aa5b63b3daef7978db3922a8fb4ddf4d17ccfb794a9b4f8c",
+      "name": "Customs Expediter",
+      "role": "Customs Expediter",
+      "password": "expediter",
+      "privateKey": "6f89c1015065b33e41327b1c6fd650c2ac0d3f482d9a9fadd09f056c32816861",
+      "encryptedKey": "{\"iv\":\"55+d0uPnqOlArH2oH859/w==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"WfvZdzkMHZ4=\",\"ct\":\"BHiyvB61RZz3r0SArtYmkDt8rn67RF6Hie5/bTwkTmiY4XQ8STvnicYx30RxdfpfuFvpm9DnXAGo/GzNsWtUCW2a3mfvN5Qy\"}",
+      "hashedPassword": "unui8JVRRzAWY9x+K38PsNrVe1pGeG8cM1NTzKCTUn8="
+    },
+
+    {
+      "username": "smelter",
+      "publicKey": "0376b46942530f0a04209e1214b3624ec7e6c98147e43ff6334246c97af59aa300",
+      "name": "Smelter",
+      "role": "Smelter",
+      "password": "smelter",
+      "privateKey": "2a752da4be09664a4c94937ae12dea4c24a1f7fb3bd26790e60dc7042a649e38",
+      "encryptedKey": "{\"iv\":\"0KsnQt2k9OfbS0zHypxVHg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"S/Fbn86O9Zk=\",\"ct\":\"3PkjNoWW1g4OFdicVN+PPyU1rqmtR7yY01FjBd4dDBKmGDOMTaLg5sPI9C4vUA3QdZWAQTmq1Z+DsQ4YYVM/tXVl2mWPhiMv\"}",
+      "hashedPassword": "ToLStZJnmyZ1KkgW9uCZ8Tk7YwI4A0n+eh+iZC9kF1Y="
+    },
+
+    {
+      "username": "processor",
+      "publicKey": "0256fddd41e562ff7682e44fe0bdf50c300e00b98c5762403655d853f81398982a",
+      "name": "Chemical Processor",
+      "role": "Chemical Processor",
+      "password": "processor",
+      "privateKey": "304117a62b8b83b5cb9f53157a31cd6c7191cebb0b125815c2466824737017ca",
+      "encryptedKey": "{\"iv\":\"UwKW/vdxjJCW964hwW3DOg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"xeAYFLyv1RE=\",\"ct\":\"1T287QvaB+9GwhTfglQ9qgCgbbZoyxsPGVbMMxHgMN9UYru28dDDHXQg0He73ECeO/6Y/iEBbnlJzs0fq6HwHwB/8aKErR0O\"}",
+      "hashedPassword": "2CW+b/1MmieozC8m5KO5W8h6j0MonKRn0GTVRMUJ+Os="
     }
   ]
 }

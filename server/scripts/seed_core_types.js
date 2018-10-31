@@ -38,7 +38,7 @@ protos.compile()
     const agentPayload = encodeTimestampedPayload({
       action: protos.SCPayload.Action.CREATE_AGENT,
       createAgent: protos.CreateAgentAction.create({
-        name: 'Supply Chain Admin'
+        name: 'Sentrifuge'
       })
     })
 
