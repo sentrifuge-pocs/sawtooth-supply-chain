@@ -37,9 +37,8 @@ const {
  */
 const authorizableProperties = [
   ['weight', 'Weight'],
-  ['location', 'Location'],
-  ['temperature', 'Temperature'],
-  ['shock', 'Shock']
+  ['assay', 'Assay'],
+  ['location', 'Location']
 ]
 
 const _labelProperty = (label, value) => [
@@ -425,14 +424,79 @@ const AssetDetail = {
     let owner = vnode.state.owner
     let custodian = vnode.state.custodian
     let record = vnode.state.record
+    const parentSerial = getPropertyValue(record, 'parent_serial')
+
     return [
       m('.asset-detail',
         m('h1.text-center', record.recordId),
+        _row(
+          _labelProperty('Ore Type', getPropertyValue(record, 'type')),
+          _labelProperty('Status', getPropertyValue(record, 'status'))),
+
+        _row(
+          _labelProperty('Container NFC Tag', getPropertyValue(record, 'tag'))),
+
+        !parentSerial
+          ? null
+          : _row(
+            _labelProperty('Parent', m('a', {
+              href: `/assets/${parentSerial}`,
+              oncreate: m.route.link
+            }, parentSerial)),
+            _labelProperty('Parent NFC', getPropertyValue(record, 'parent_tag'))),
+
         _row(
           _labelProperty('Created',
                          _formatTimestamp(getOldestPropertyUpdateTime(record))),
           _labelProperty('Updated',
                          _formatTimestamp(getLatestPropertyUpdateTime(record)))),
+
+        _row(
+          _labelProperty('Country of Origin', getPropertyValue(record, 'origin')),
+          _labelProperty('Zone', getPropertyValue(record, 'zone'))),
+
+        _row(
+          _labelProperty(
+            'Weight',
+            _propLink(record, 'weight', _formatValue(record, 'weight'))),
+          (isReporter(record, 'weight', publicKey) && !record.final
+          ? m(ReportValue,
+            {
+              name: 'weight',
+              label: 'Weight (kg)',
+              record,
+              typeField: 'numberValue',
+              type: payloads.updateProperties.enum.NUMBER,
+              xform: (x) => parsing.toInt(x),
+              onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
+            })
+           : null)),
+
+        _row(
+          _labelProperty(
+            'Assay',
+            _propLink(record, 'assay', _formatValue(record, 'assay'))),
+          (isReporter(record, 'assay', publicKey) && !record.final
+          ? m(ReportValue,
+            {
+              name: 'assay',
+              label: 'Assay (%)',
+              record,
+              typeField: 'numberValue',
+              type: payloads.updateProperties.enum.NUMBER,
+              xform: (x) => parsing.toInt(x / 100),
+              onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
+            })
+           : null)),
+
+        _row(
+          _labelProperty(
+            'Location',
+            _propLink(record, 'location', _formatLocation(getPropertyValue(record, 'location')))
+          ),
+          (isReporter(record, 'location', publicKey) && !record.final
+           ? m(ReportLocation, { record, onsuccess: () => _loadData(record.recordId, vnode.state) })
+           : null)),
 
         _row(
           _labelProperty('Owner', _agentLink(owner)),
@@ -455,70 +519,6 @@ const AssetDetail = {
             label: 'Custodianship',
             onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
           })),
-
-        _row(
-          _labelProperty('Type', getPropertyValue(record, 'type')),
-          _labelProperty('Subtype', getPropertyValue(record, 'subtype'))),
-
-        _row(
-          _labelProperty(
-            'Weight',
-            _propLink(record, 'weight', _formatValue(record, 'weight'))),
-          (isReporter(record, 'weight', publicKey) && !record.final
-          ? m(ReportValue,
-            {
-              name: 'weight',
-              label: 'Weight (kg)',
-              record,
-              typeField: 'numberValue',
-              type: payloads.updateProperties.enum.NUMBER,
-              xform: (x) => parsing.toInt(x),
-              onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
-            })
-           : null)),
-
-        _row(
-          _labelProperty(
-            'Location',
-            _propLink(record, 'location', _formatLocation(getPropertyValue(record, 'location')))
-          ),
-          (isReporter(record, 'location', publicKey) && !record.final
-           ? m(ReportLocation, { record, onsuccess: () => _loadData(record.recordId, vnode.state) })
-           : null)),
-
-        _row(
-          _labelProperty(
-            'Temperature',
-            _propLink(record, 'temperature', _formatTemp(getPropertyValue(record, 'temperature')))),
-          (isReporter(record, 'temperature', publicKey) && !record.final
-          ? m(ReportValue,
-            {
-              name: 'temperature',
-              label: 'Temperature (°C)',
-              record,
-              typeField: 'numberValue',
-              type: payloads.updateProperties.enum.NUMBER,
-              xform: (x) => parsing.toInt(x),
-              onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
-            })
-           : null)),
-
-        _row(
-          _labelProperty(
-            'Shock',
-            _propLink(record, 'shock', _formatValue(record, 'shock'))),
-          (isReporter(record, 'shock', publicKey) && !record.final
-          ? m(ReportValue,
-            {
-              name: 'shock',
-              label: 'Shock (g)',
-              record,
-              typeField: 'numberValue',
-              type: payloads.updateProperties.enum.NUMBER,
-              xform: (x) => parsing.toInt(x),
-              onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
-            })
-           : null)),
 
         _row(m(ReporterControl, {
           record,

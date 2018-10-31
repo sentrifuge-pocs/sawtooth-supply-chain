@@ -23,6 +23,7 @@ const { FLOAT_PRECISION } = require('./payloads')
 const STRINGIFIERS = {
   LOCATION: v => `${v.latitude}, ${v.longitude}`,
   weight: v => `${v}kg`,
+  assay: v => `${Math.floor(v * 100 * 1000) / 1000}%`,
   temperature: v => `${v} °C`,
   shock: v => `${v}g`,
   '*': v => JSON.stringify(v, null, 1).replace(/[{}"]/g, '')
