@@ -1,114 +1,115 @@
 {
   "records": [
     {
-      "recordId": "7h15-45537-15-br173",
-      "recordType": "asset",
+      "recordId": "7h15-m1n3r41-w111-b3-t1n",
+      "recordType": "mineral",
       "properties": [
           {
-            "name": "type",
+            "name": "tag",
             "dataType": 4,
-            "stringValue": "Lightbulb"
+            "stringValue": "bba987d0b382c5aa5edfe399a4b1e124b508126bd5bc7aef61bc853d0818f8be"
           },
           {
-            "name": "subtype",
-            "dataType": 4,
-            "stringValue": "LED"
+            "name": "type",
+            "dataType": 5,
+            "enumValue": "Cassiterite"
+          },
+          {
+            "name": "status",
+            "dataType": 5,
+            "enumValue": "Run-of-Mine"
+          },
+          {
+            "name": "container",
+            "dataType": 5,
+            "enumValue": "Sealed Tamper-Evident Bag"
+          },
+          {
+            "name": "origin",
+            "dataType": 5,
+            "enumValue": "Democratic Republic of Congo"
+          },
+          {
+            "name": "zone",
+            "dataType": 5,
+            "enumValue": "Zone 2"
+          },
+          {
+            "name": "assay",
+            "dataType": 3,
+            "numberValue": 100000
           },
           {
             "name": "weight",
             "dataType": 3,
-            "numberValue": 134089
+            "numberValue": 100000000
           },
           {
             "name": "location",
             "dataType": 7,
             "locationValue": {
-              "latitude": 33928564,
-              "longitude": 134615935
+              "latitude": -11029343,
+              "longitude": 26532715
             }
-          },
-          {
-            "name": "temperature",
-            "dataType": 3,
-            "numberValue": 44857012
           }
       ],
-      "ownerIndex": 0,
-      "custodianIndex": 1,
-      "reporterIndex": 2,
-      "reportableProperties": ["temperature", "location", "weight", "shock"]
+      "ownerIndex": 0
     },
 
     {
-      "recordId": "7h15-45537-f1135",
-      "recordType": "asset",
+      "recordId": "7h15-m1n3r41-15-5h1ny",
+      "recordType": "mineral",
       "properties": [
           {
-            "name": "type",
+            "name": "tag",
             "dataType": 4,
-            "stringValue": "Airliner"
+            "stringValue": "38da3ea328034d44793de02bac83da2811ded823db85fb353210b992b825ac4d"
           },
           {
-            "name": "subtype",
-            "dataType": 4,
-            "stringValue": "Boeing 747"
+            "name": "type",
+            "dataType": 5,
+            "enumValue": "Gold"
+          },
+          {
+            "name": "status",
+            "dataType": 5,
+            "enumValue": "Run-of-Mine"
+          },
+          {
+            "name": "container",
+            "dataType": 5,
+            "enumValue": "Sealed Tamper-Evident Bag"
+          },
+          {
+            "name": "origin",
+            "dataType": 5,
+            "enumValue": "China"
+          },
+          {
+            "name": "zone",
+            "dataType": 5,
+            "enumValue": "Zone 3"
+          },
+          {
+            "name": "assay",
+            "dataType": 3,
+            "numberValue": 200000
           },
           {
             "name": "weight",
             "dataType": 3,
-            "numberValue": 174540000000
+            "numberValue": 50000000
           },
           {
             "name": "location",
             "dataType": 7,
             "locationValue": {
-              "latitude": 47499875,
-              "longitude": -122208106
+              "latitude": 41462024,
+              "longitude": 120412043
             }
-          },
-          {
-            "name": "temperature",
-            "dataType": 3,
-            "numberValue": -35014970
           }
       ],
-      "ownerIndex": 1
-    },
-
-    {
-      "recordId": "7h15-45537-15-b357",
-      "recordType": "asset",
-      "properties": [
-          {
-            "name": "type",
-            "dataType": 4,
-            "stringValue": "Coffee"
-          },
-          {
-            "name": "subtype",
-            "dataType": 4,
-            "stringValue": "Kona"
-          },
-          {
-            "name": "weight",
-            "dataType": 3,
-            "numberValue": 10000000
-          },
-          {
-            "name": "location",
-            "dataType": 7,
-            "locationValue": {
-              "latitude": 19703448,
-              "longitude": -155944975
-            }
-          },
-          {
-            "name": "temperature",
-            "dataType": 3,
-            "numberValue": 21829043
-          }
-      ],
-      "ownerIndex": 1
+      "ownerIndex": 0
     }
   ],
 
