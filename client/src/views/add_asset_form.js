@@ -29,9 +29,8 @@ const layout = require('../components/layout')
  */
 const authorizableProperties = [
   ['weight', 'Weight'],
-  ['location', 'Location'],
-  ['temperature', 'Temperature'],
-  ['shock', 'Shock']
+  ['assay', 'Assay'],
+  ['location', 'Location']
 ]
 
 /**
@@ -63,20 +62,38 @@ const AddAssetForm = {
             _handleSubmit(vnode.attrs.signingKey, vnode.state)
           }
         },
-        m('legend', 'Track New Asset'),
-        forms.textInput(setter('serialNumber'), 'Serial Number'),
-
+        m('legend', 'Add New Container'),
         layout.row([
-          forms.textInput(setter('type'), 'Type'),
-          forms.textInput(setter('subtype'), 'Subtype', false)
+          forms.textInput(setter('id'), 'Serial Number'),
+          forms.textInput(setter('tag'), 'NFC Tag'),
         ]),
 
-        forms.group('Weight (kg)', forms.field(setter('weight'), {
-          type: 'number',
-          step: 'any',
-          min: 0,
-          required: false
-        })),
+        layout.row([
+          forms.textInput(setter('type'), 'Ore Type'),
+          forms.textInput(setter('status'), 'Status')
+        ]),
+
+        forms.textInput(setter('container'), 'Container Type'),
+
+        layout.row([
+          forms.textInput(setter('origin'), 'Country of Origin'),
+          forms.textInput(setter('zone'), 'Zone')
+        ]),
+
+        layout.row([
+          forms.group('Assay (%)', forms.field(setter('assay'), {
+            type: 'number',
+            step: 'any',
+            min: 0,
+            required: false
+          })),
+          forms.group('Weight (kg)', forms.field(setter('weight'), {
+            type: 'number',
+            step: 'any',
+            min: 0,
+            required: false
+          }))
+        ]),
 
         layout.row([
           forms.group('Latitude', forms.field(setter('latitude'), {
@@ -129,7 +146,7 @@ const AddAssetForm = {
         m('.row.justify-content-end.align-items-end',
           m('col-2',
             m('button.btn.btn-primary',
-              'Create Record')))))
+              'Add Container Record')))))
     ]
   }
 }
@@ -159,17 +176,60 @@ const _updateReporters = (vnode, reporterIndex) => {
  * Extract the appropriate values to pass to the create record transaction.
  */
 const _handleSubmit = (signingKey, state) => {
-  const properties = [{
-    name: 'type',
-    stringValue: state.type,
-    dataType: payloads.createRecord.enum.STRING
-  }]
-
-  if (state.subtype) {
-    properties.push({
-      name: 'subtype',
-      stringValue: state.subtype,
+  const properties = [
+    {
+      name: 'tag',
+      stringValue: state.tag,
       dataType: payloads.createRecord.enum.STRING
+    },
+    {
+      name: 'type',
+      enumValue: state.type,
+      dataType: payloads.createRecord.enum.ENUM
+    },
+    {
+      name: 'status',
+      enumValue: state.status,
+      dataType: payloads.createRecord.enum.ENUM
+    },
+    {
+      name: 'container',
+      enumValue: state.container,
+      dataType: payloads.createRecord.enum.ENUM
+    },
+    {
+      name: 'origin',
+      enumValue: state.origin,
+      dataType: payloads.createRecord.enum.ENUM
+    },
+    {
+      name: 'zone',
+      enumValue: state.zone,
+      dataType: payloads.createRecord.enum.ENUM
+    }
+  ]
+
+  if (state.parentId) {
+    properties.push({
+      name: 'parent_id',
+      stringValue: state.parentId,
+      dataType: payloads.createRecord.enum.STRING
+    })
+  }
+
+  if (state.parentTag) {
+    properties.push({
+      name: 'parent_tag',
+      stringValue: state.parentTag,
+      dataType: payloads.createRecord.enum.STRING
+    })
+  }
+
+  if (state.assay) {
+    properties.push({
+      name: 'assay',
+      numberValue: parsing.toInt(state.assay / 100),
+      dataType: payloads.createRecord.enum.NUMBER
     })
   }
 
@@ -193,22 +253,22 @@ const _handleSubmit = (signingKey, state) => {
   }
 
   const recordPayload = payloads.createRecord({
-    recordId: state.serialNumber,
-    recordType: 'asset',
+    recordId: state.id,
+    recordType: 'mineral',
     properties
   })
-
+parsing.toInt(state.weight)
   const reporterPayloads = state.reporters
     .filter((reporter) => !!reporter.reporterKey)
     .map((reporter) => payloads.createProposal({
-      recordId: state.serialNumber,
+      recordId: state.id,
       receivingAgent: reporter.reporterKey,
       role: payloads.createProposal.enum.REPORTER,
       properties: reporter.properties
     }))
 
   transactions.submit([recordPayload].concat(reporterPayloads), true)
-    .then(() => m.route.set(`/assets/${state.serialNumber}`))
+    .then(() => m.route.set(`/assets/${state.id}`))
 }
 
 module.exports = AddAssetForm
