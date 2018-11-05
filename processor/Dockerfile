@@ -14,7 +14,7 @@
 
 FROM rust:1
 
-RUN apt-get update && apt-get install -y unzip libzmq3-dev
+RUN apt-get update && apt-get install -y --allow-unauthenticated unzip libzmq3-dev
 
 # For Building Protobufs
 RUN curl -OLsS https://github.com/google/protobuf/releases/download/v3.5.1/protoc-3.5.1-linux-x86_64.zip \
