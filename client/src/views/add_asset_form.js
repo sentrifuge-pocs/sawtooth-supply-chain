@@ -57,10 +57,24 @@ const AddAssetForm = {
         const publicKey = api.getPublicKey()
         vnode.state.agents = agents.filter(agent => agent.key !== publicKey)
       })
+
+    if (vnode.attrs.parentId) {
+      api.get(`records/${vnode.attrs.parentId}`)
+        .then(parent => {
+          const props = parent.properties.reduce((props, { name, value }) => {
+            props[name] = value
+            return props
+          }, {})
+
+          vnode.state.parent = Object.assign({ props }, parent)
+        })
+    }
   },
 
   view (vnode) {
     const setter = forms.stateSetter(vnode.state)
+    const { parent } = vnode.state
+
     return [
       m('.add_asset_form',
         m('form', {
@@ -74,6 +88,13 @@ const AddAssetForm = {
           forms.textInput(setter('id'), 'Serial Number'),
           forms.textInput(setter('tag'), 'NFC Tag'),
         ]),
+
+        !parent
+          ? null
+          : layout.row([
+            forms.group('Parent Serial', m('.text-muted', parent.recordId)),
+            forms.group('Parent Tag', m('.text-muted', parent.props.tag))
+          ]),
 
         layout.row([
           forms.select(setter('type'), 'Ore Type', ORE_TYPES),
@@ -215,18 +236,16 @@ const _handleSubmit = (signingKey, state) => {
     }
   ]
 
-  if (state.parentId) {
+  if (state.parent) {
     properties.push({
       name: 'parent_id',
-      stringValue: state.parentId,
+      stringValue: state.parent.recordId,
       dataType: payloads.createRecord.enum.STRING
     })
-  }
 
-  if (state.parentTag) {
     properties.push({
       name: 'parent_tag',
-      stringValue: state.parentTag,
+      stringValue: state.parent.props.tag,
       dataType: payloads.createRecord.enum.STRING
     })
   }
@@ -258,12 +277,20 @@ const _handleSubmit = (signingKey, state) => {
     })
   }
 
-  const recordPayload = payloads.createRecord({
+  const createPayloads = []
+
+  if (state.parent) {
+    createPayloads.push(payloads.finalizeRecord({
+      recordId: state.parent.recordId
+    }))
+  }
+
+  createPayloads.push(payloads.createRecord({
     recordId: state.id,
     recordType: 'mineral',
     properties
-  })
-parsing.toInt(state.weight)
+  }))
+
   const reporterPayloads = state.reporters
     .filter((reporter) => !!reporter.reporterKey)
     .map((reporter) => payloads.createProposal({
@@ -273,7 +300,7 @@ parsing.toInt(state.weight)
       properties: reporter.properties
     }))
 
-  transactions.submit([recordPayload].concat(reporterPayloads), true)
+  transactions.submit(createPayloads.concat(reporterPayloads), true)
     .then(() => m.route.set(`/assets/${state.id}`))
 }
 

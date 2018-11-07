@@ -530,14 +530,11 @@ const AssetDetail = {
         ((record.owner === publicKey && !record.final)
          ? m('.row.m-2',
              m('.col.text-center',
-               m('button.btn.btn-danger', {
-                 onclick: (e) => {
-                   e.preventDefault()
-                   _finalizeRecord(record).then(() =>
-                     _loadData(vnode.attrs.recordId, vnode.state))
-                 }
+               m('a.btn.btn-danger', {
+                 href: `/create?parentId=${record.recordId}`,
+                 oncreate: m.route.link
                },
-               'Finalize')))
+               'Process')))
          : '')
        )
     ]
@@ -626,16 +623,6 @@ const _updateProperty = (record, value) => {
 
   return transactions.submit([updatePayload], true).then(() => {
     console.log('Successfully submitted property update')
-  })
-}
-
-const _finalizeRecord = (record) => {
-  let finalizePayload = payloads.finalizeRecord({
-    recordId: record.recordId
-  })
-
-  return transactions.submit([finalizePayload], true).then(() => {
-    console.log('finalized')
   })
 }
 
