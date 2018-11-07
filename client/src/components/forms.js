@@ -56,6 +56,17 @@ const passwordInput = _.partial(input, 'password')
 const numberInput = _.partial(input, 'number')
 const emailInput = _.partial(input, 'email')
 
+const select = (onValue, label, options) => {
+  const fullOptions = [m('option', { value: '' }, '--')]
+    .concat(options.map(value => m('option', { value }, value)))
+  return group(
+    label,
+    m('select.form-control',
+      { required: true, oninput: m.withAttr('value', onValue) },
+      fullOptions)
+  )
+}
+
 /**
  * Creates an icon with an onclick function
  */
@@ -153,6 +164,7 @@ module.exports = {
   numberInput,
   emailInput,
   clickIcon,
+  select,
   stateSetter,
   validator,
   triggerDownload,

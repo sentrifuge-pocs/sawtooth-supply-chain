@@ -23,6 +23,7 @@ const transactions = require('../services/transactions')
 const parsing = require('../services/parsing')
 const forms = require('../components/forms')
 const layout = require('../components/layout')
+const types = require('../../sample_data/core_types.json')
 
 /**
  * Possible selection options
@@ -32,6 +33,12 @@ const authorizableProperties = [
   ['assay', 'Assay'],
   ['location', 'Location']
 ]
+
+const ORE_TYPES = types[0].properties[3].enumOptions
+const STATUSES = types[0].properties[4].enumOptions
+const CONTAINER_TYPES = types[0].properties[5].enumOptions
+const ORIGINS = types[0].properties[6].enumOptions
+const ZONES = types[0].properties[7].enumOptions
 
 /**
  * The Form for tracking a new asset.
@@ -69,15 +76,14 @@ const AddAssetForm = {
         ]),
 
         layout.row([
-          forms.textInput(setter('type'), 'Ore Type'),
-          forms.textInput(setter('status'), 'Status')
+          forms.select(setter('type'), 'Ore Type', ORE_TYPES),
+          forms.select(setter('status'), 'Status', STATUSES),
+          forms.select(setter('container'), 'Container Type', CONTAINER_TYPES)
         ]),
 
-        forms.textInput(setter('container'), 'Container Type'),
-
         layout.row([
-          forms.textInput(setter('origin'), 'Country of Origin'),
-          forms.textInput(setter('zone'), 'Zone')
+          forms.select(setter('origin'), 'Country of Origin', ORIGINS),
+          forms.select(setter('zone'), 'Zone', ZONES)
         ]),
 
         layout.row([
