@@ -45,19 +45,6 @@ const ZONES = types[0].properties[7].enumOptions
  */
 const AddAssetForm = {
   oninit (vnode) {
-    // Initialize the empty reporters fields
-    vnode.state.reporters = [
-      {
-        reporterKey: '',
-        properties: []
-      }
-    ]
-    api.get('agents')
-      .then(agents => {
-        const publicKey = api.getPublicKey()
-        vnode.state.agents = agents.filter(agent => agent.key !== publicKey)
-      })
-
     if (vnode.attrs.parentId) {
       api.get(`records/${vnode.attrs.parentId}`)
         .then(parent => {
@@ -139,61 +126,11 @@ const AddAssetForm = {
           }))
         ]),
 
-        m('.reporters.form-group',
-          m('label', 'Authorize Reporters'),
-          vnode.state.reporters.map((reporter, i) =>
-            m('.row.mb-2',
-              m('.col-sm-8',
-                m('input.form-control', {
-                  type: 'text',
-                  placeholder: 'Add reporter by name or public key...',
-                  oninput: m.withAttr('value', (value) => {
-                    // clear any previously matched values
-                    vnode.state.reporters[i].reporterKey = null
-                    const reporter = vnode.state.agents.find(agent => {
-                      return agent.name === value || agent.key === value
-                    })
-                    if (reporter) {
-                      vnode.state.reporters[i].reporterKey = reporter.key
-                    }
-                  }),
-                  onblur: () => _updateReporters(vnode, i)
-                })),
-
-             m('.col-sm-4',
-                m(forms.MultiSelect, {
-                  label: 'Select Fields',
-                  options: authorizableProperties,
-                  selected: reporter.properties,
-                  onchange: (selection) => {
-                    vnode.state.reporters[i].properties = selection
-                  }
-                }))))),
-
         m('.row.justify-content-end.align-items-end',
           m('col-2',
             m('button.btn.btn-primary',
               'Add Container Record')))))
     ]
-  }
-}
-
-/**
- * Update the reporter's values after a change occurs in the name of the
- * reporter at the given reporterIndex. If it is empty, and not the only
- * reporter in the list, remove it.  If it is not empty and the last item
- * in the list, add a new, empty reporter to the end of the list.
- */
-const _updateReporters = (vnode, reporterIndex) => {
-  let reporterInfo = vnode.state.reporters[reporterIndex]
-  let lastIdx = vnode.state.reporters.length - 1
-  if (!reporterInfo.reporterKey && reporterIndex !== lastIdx) {
-    vnode.state.reporters.splice(reporterIndex, 1)
-  } else if (reporterInfo.reporterKey && reporterIndex === lastIdx) {
-    vnode.state.reporters.push({
-      reporterKey: '',
-      properties: []
-    })
   }
 }
 
