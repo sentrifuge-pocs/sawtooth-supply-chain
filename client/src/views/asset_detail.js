@@ -424,7 +424,7 @@ const AssetDetail = {
     let owner = vnode.state.owner
     let custodian = vnode.state.custodian
     let record = vnode.state.record
-    const parentSerial = getPropertyValue(record, 'parent_serial')
+    const parentId = getPropertyValue(record, 'parent_id')
 
     return [
       m('.asset-detail',
@@ -436,13 +436,13 @@ const AssetDetail = {
         _row(
           _labelProperty('Container NFC Tag', getPropertyValue(record, 'tag'))),
 
-        !parentSerial
+        !parentId
           ? null
           : _row(
             _labelProperty('Parent', m('a', {
-              href: `/assets/${parentSerial}`,
+              href: `/assets/${parentId}`,
               oncreate: m.route.link
-            }, parentSerial)),
+            }, parentId)),
             _labelProperty('Parent NFC', getPropertyValue(record, 'parent_tag'))),
 
         _row(
