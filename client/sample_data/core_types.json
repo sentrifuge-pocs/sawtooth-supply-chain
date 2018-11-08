@@ -67,8 +67,8 @@
           "required": true,
           "fixed": true,
           "enumOptions": [
-              "Sealed Tamper-Evident Bag",
-              "Sealed 55 Gallon Drum",
+              "Tamper-Evident Bag",
+              "55 Gallon Drum",
               "Shipping Container"
           ]
         },
