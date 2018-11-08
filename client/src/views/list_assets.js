@@ -40,7 +40,7 @@ const AssetList = {
         })
         vnode.state.filteredRecords = vnode.state.records
       })
-        .then(() => { vnode.state.refreshId = setTimeout(refresh, 2000) })
+        .then(() => { vnode.state.refreshId = setTimeout(refresh, 3600000) })
     }
 
     refresh()

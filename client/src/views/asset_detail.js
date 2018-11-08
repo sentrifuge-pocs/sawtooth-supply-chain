@@ -408,7 +408,7 @@ const AssetDetail = {
     _loadData(vnode.attrs.recordId, vnode.state)
     vnode.state.refreshId = setInterval(() => {
       _loadData(vnode.attrs.recordId, vnode.state)
-    }, 2000)
+    }, 3600000)
   },
 
   onbeforeremove (vnode) {
