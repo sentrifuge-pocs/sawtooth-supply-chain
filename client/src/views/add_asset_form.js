@@ -80,6 +80,11 @@ const AddAssetForm = {
       ? MINERAL_TYPES
       : CHILD_TYPES[parent.props.type] || []
 
+    if (parent) {
+      vnode.state.origin = parent.props.origin
+      vnode.state.zone = parent.props.zone
+    }
+
     return [
       m('.add_asset_form',
         m('form', {
@@ -107,10 +112,15 @@ const AddAssetForm = {
           forms.select(setter('container'), 'Container Type', CONTAINER_TYPES)
         ]),
 
-        layout.row([
-          forms.select(setter('origin'), 'Country of Origin', ORIGINS),
-          forms.select(setter('zone'), 'Zone', ZONES)
-        ]),
+        parent
+          ? layout.row([
+            forms.group('Country of Origin', m('.text-muted', vnode.state.origin)),
+            forms.group('Zone', m('.text-muted', vnode.state.zone))
+          ])
+          : layout.row([
+            forms.select(setter('origin'), 'Country of Origin', ORIGINS),
+            forms.select(setter('zone'), 'Zone', ZONES)
+          ]),
 
         layout.row([
           forms.group('Assay (%)', forms.field(setter('assay'), {
