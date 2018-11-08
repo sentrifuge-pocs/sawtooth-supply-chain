@@ -1,13 +1,13 @@
 {
   "records": [
     {
-      "recordId": "7h15-m1n3r41-w111-b3-t1n",
+      "recordId": "A63800786",
       "recordType": "mineral",
       "properties": [
           {
             "name": "tag",
             "dataType": 4,
-            "stringValue": "bba987d0b382c5aa5edfe399a4b1e124b508126bd5bc7aef61bc853d0818f8be"
+            "stringValue": "A6CB153E18AFDB71AB377B963FA3716270853F1B93630184058979AF93430C32"
           },
           {
             "name": "type",
@@ -57,13 +57,13 @@
     },
 
     {
-      "recordId": "7h15-m1n3r41-15-5h1ny",
+      "recordId": "A63800766",
       "recordType": "mineral",
       "properties": [
           {
             "name": "tag",
             "dataType": 4,
-            "stringValue": "38da3ea328034d44793de02bac83da2811ded823db85fb353210b992b825ac4d"
+            "stringValue": "C38149964ECEF1060E885691F9AF80CEE11FFD34F40EAD3DC24C2804B9292F87"
           },
           {
             "name": "type",
