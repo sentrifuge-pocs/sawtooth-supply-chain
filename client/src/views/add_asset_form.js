@@ -34,7 +34,22 @@ const authorizableProperties = [
   ['location', 'Location']
 ]
 
-const ORE_TYPES = types[0].properties[3].enumOptions
+const PROCESSED_MINERALS = new Set([
+  'Coltan Concentrate',
+  'Gold Concentrate',
+  'Gold Dore',
+  'Refined Gold',
+  'Tantalum'
+])
+const CHILD_TYPES = {
+  'Coltan Ore': ['Coltan Concentrate'],
+  'Coltan Concentrate': ['Tantalum'],
+  'Gold Ore': ['Gold Concentrate'],
+  'Gold Dore': ['Refined Gold']
+}
+
+const MINERAL_TYPES = types[0].properties[3].enumOptions
+  .filter(t => !PROCESSED_MINERALS.has(t))
 const STATUSES = types[0].properties[4].enumOptions
 const CONTAINER_TYPES = types[0].properties[5].enumOptions
 const ORIGINS = types[0].properties[6].enumOptions
@@ -61,6 +76,9 @@ const AddAssetForm = {
   view (vnode) {
     const setter = forms.stateSetter(vnode.state)
     const { parent } = vnode.state
+    const types = !parent
+      ? MINERAL_TYPES
+      : CHILD_TYPES[parent.props.type] || []
 
     return [
       m('.add_asset_form',
@@ -84,7 +102,7 @@ const AddAssetForm = {
           ]),
 
         layout.row([
-          forms.select(setter('type'), 'Ore Type', ORE_TYPES),
+          forms.select(setter('type'), 'Mineral Type', types),
           forms.select(setter('status'), 'Status', STATUSES),
           forms.select(setter('container'), 'Container Type', CONTAINER_TYPES)
         ]),

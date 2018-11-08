@@ -68,7 +68,7 @@
           {
             "name": "type",
             "dataType": 5,
-            "enumValue": "Gold"
+            "enumValue": "Gold Ore"
           },
           {
             "name": "status",
