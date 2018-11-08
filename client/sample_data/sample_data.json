@@ -115,80 +115,279 @@
 
   "agents": [
     {
-      "username": "miner",
-      "publicKey": "032256bb047d68e5f3f1132535cd43d3335ba47e0dd2d0138ed0fbbf30d4e1986a",
-      "name": "Miner",
-      "role": "Miner",
-      "password": "miner",
-      "privateKey": "43a3d50c3d31b5d0ed2ed4bb0bc3d802cde5f221fe949f7f30987319fc7b586d",
-      "encryptedKey": "{\"iv\":\"g0quIcnfMutJrw9y9jaSZQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"GZJmnIMbBxk=\",\"ct\":\"SU4TRgCXeCKmbrM3WmrvoVpY9tdr+QlAJlgk5IU3QGEcBInxUxu+k/InpPSofMfefmiN0FJdHl8ZAtx+XfdE4ABlnqBbTAqj\"}",
-      "hashedPassword": "ixM6OGiZMXa2E3OIFiR6f001fK5VWZZRnPW1Q+mzVUs="
-    },
-
-    {
-      "username": "trader",
-      "publicKey": "03259e9ff57ea9c13b1acffa151274a1cc70ce97ce0a7f741b177f7fb71b63a1f6",
-      "name": "Trader",
-      "role": "Trader",
-      "password": "trader",
-      "privateKey": "e757097fef6d9bd3e8b03cc3208f7d1658df47b9623b36472f39a84fb7d18a0a",
-      "encryptedKey": "{\"iv\":\"0XC8sQ7uxwUmgQYyNyp6Iw==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"WajL56GRz1o=\",\"ct\":\"L/hWhTkzmYtcnaTEOzvLmJc8gdlKfnVNBhWYPx2uasMaxUnTrLggRVSV2lmwIU2iSUKqSE+YU0M6ztAGWk/OP4/5twSnrYuG\"}",
-      "hashedPassword": "xA42JTyb6H4BAYIvjBla49SzMPP9vCr2N+9bmzj9Cjw="
-    },
-
-    {
-      "username": "transporter",
-      "publicKey": "028770df443907d29d26d438966b00f920f2dab65a191d7ce002cf09fae4c35ed7",
-      "name": "Transporter",
+      "username": "agat",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Agat Durieux",
       "role": "Transporter",
-      "password": "transporter",
-      "privateKey": "f8e8cdaace6d960acf5407896f45eb8c6bc5eabd81196c9916f2ad9c4f4b7901",
-      "encryptedKey": "{\"iv\":\"F/wciZK+IhwdAlIL/ED20g==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"fRWzdrem/48=\",\"ct\":\"0fTHT8hX80PwTEvV4PUQ9Ssf8cVJuVZEwh1Dd6vPdvVLZX4gHZUuPgGrT0bdjsH1kI35iVT13Vwi08ZKRY2tBrWT0chVfIlA\"}",
-      "hashedPassword": "hVVUd/iu18krZj3vNHEkvFCtayjATuZ73MEA2lI4HvY="
+      "privateKey": "6510bfa44f0db7b094e1b4abe3f038b6340bc42a38ed1c8f50f459d336b09799",
+      "publicKey": "0308e01cd06193cc3dcc6665cad571db050c00dcde175adcec55a2e5d8ae544178",
+      "encryptedKey": "{\"iv\":\"FMMpZRH3CnqKIlgjiD/N3A==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"ITl9m1I2riKe9oTTdvbo7OjAlAfyiCUgaHFxRulcURIKRb0HQck9T752aK0wMHtzoHyBwZA9Bqqx/455RNmwfc0a5HCqFmU3\"}"
     },
 
     {
-      "username": "customs",
-      "publicKey": "033ccd4a63178ca8e5a8104639bfdfcfac1eda08f6805399cd989908d4c0fa1a7c",
-      "name": "Customs Officer",
-      "role": "Customs Officer",
-      "password": "customs",
-      "privateKey": "a1c7d43444f67350a60c652fce88737c099664aa7a0e56622cab56dfc56637a8",
-      "encryptedKey": "{\"iv\":\"IBx0i6UNn3VlmI5zVdKjrQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"aWmq18/kr7w=\",\"ct\":\"t+Q+rp045d9DlF52PmkA0GxQKAOtmaE6QRUaXsCeP813Nu//vhikqg8Zx4RkScaMOxnWodSLd/PUcJuP2FqhGM5fp2EXy2ly\"}",
-      "hashedPassword": "ReKFEzuJG8O8Ai/dXtoHJrFbYJOW5bjnNAeKufXM3Ws="
-    },
-
-    {
-      "username": "expediter",
-      "publicKey": "03ce6a53bf74b31d99aa5b63b3daef7978db3922a8fb4ddf4d17ccfb794a9b4f8c",
-      "name": "Customs Expediter",
+      "username": "banza",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Banza Masala",
       "role": "Customs Expediter",
-      "password": "expediter",
-      "privateKey": "6f89c1015065b33e41327b1c6fd650c2ac0d3f482d9a9fadd09f056c32816861",
-      "encryptedKey": "{\"iv\":\"55+d0uPnqOlArH2oH859/w==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"WfvZdzkMHZ4=\",\"ct\":\"BHiyvB61RZz3r0SArtYmkDt8rn67RF6Hie5/bTwkTmiY4XQ8STvnicYx30RxdfpfuFvpm9DnXAGo/GzNsWtUCW2a3mfvN5Qy\"}",
-      "hashedPassword": "unui8JVRRzAWY9x+K38PsNrVe1pGeG8cM1NTzKCTUn8="
+      "privateKey": "8a4cdaec0aa86dd5d8ba2ac43b8aecd97994ba203f8ea6559b312df7e0a5c4ea",
+      "publicKey": "031eecb3dc0dcf6370475970f876516b37d22bd6854bd9d9d1b7abf8bb63d4a8b1",
+      "encryptedKey": "{\"iv\":\"stbzJd3luhowEGovpwtNkA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"OUHIZhEiQFfQOcQlnRv+dToabNbJ9NXTX8/21wV2/KJJN1a547oHpUqX5Nf7M+nOlE8KPhp3kiVYHDYHxRXPwAkNXJQkPWUB\"}"
     },
 
     {
-      "username": "smelter",
-      "publicKey": "0376b46942530f0a04209e1214b3624ec7e6c98147e43ff6334246c97af59aa300",
-      "name": "Smelter",
-      "role": "Smelter",
-      "password": "smelter",
-      "privateKey": "2a752da4be09664a4c94937ae12dea4c24a1f7fb3bd26790e60dc7042a649e38",
-      "encryptedKey": "{\"iv\":\"0KsnQt2k9OfbS0zHypxVHg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"S/Fbn86O9Zk=\",\"ct\":\"3PkjNoWW1g4OFdicVN+PPyU1rqmtR7yY01FjBd4dDBKmGDOMTaLg5sPI9C4vUA3QdZWAQTmq1Z+DsQ4YYVM/tXVl2mWPhiMv\"}",
-      "hashedPassword": "ToLStZJnmyZ1KkgW9uCZ8Tk7YwI4A0n+eh+iZC9kF1Y="
+      "username": "brian",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Brian Savage",
+      "role": "Trader",
+      "privateKey": "a8736e990b0eb93dbc8de1da5c69c90a22989e9616c42473f0de4c3738f61a6e",
+      "publicKey": "032cac92ee0c91427cca4dbe1c2c259b4846fd7293fedcf9db21666cbb3bbc3554",
+      "encryptedKey": "{\"iv\":\"RGzgN4jgDmNyRIYmGU581A==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"lZpVM3iyrXE=\",\"ct\":\"KBl6WWcGrtiloIFCB29akPcB4mZScF/nsG3XVwunI9jY9+q/QYZAB+GIvbrJE3UEIhLKrEEer39tFkxg2t9TVvdK8GHJwfhz\"}"
     },
 
     {
-      "username": "processor",
-      "publicKey": "0256fddd41e562ff7682e44fe0bdf50c300e00b98c5762403655d853f81398982a",
-      "name": "Chemical Processor",
+      "username": "collin",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Collin Naicker",
+      "role": "Refiner",
+      "privateKey": "21d5145136f2a719a0cb5547b4530a5171bf97c6c6e755a2176d678a949c3b50",
+      "publicKey": "0356597f530cd903b23cc3c5a465745f8828cd0e7c7846e69285eb036a4c9f42ec",
+      "encryptedKey": "{\"iv\":\"7DNnp4O3qNql34HxtNpiJw==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"aAzgY3RBYToUTCfRctEtVXAu9aDe+7gNtLV7jwjHXeBrByM7v18qbmGgmPumzh8CIC+So7q8wtLFvl0C+2CLVGbt0EWAmPII\"}"
+    },
+
+    {
+      "username": "eddie",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Eddie Kasongo",
+      "role": "Processor",
+      "privateKey": "756632f16df53add1d5215ce260b431c74c3b98a0654e409e528175dac712f32",
+      "publicKey": "0265e271ce02376d13339017d6e3fba5123216275be522f7aecc5fba20fceb2e26",
+      "encryptedKey": "{\"iv\":\"GSV0RWnhfKpBwlsZl4uoPw==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"lZpVM3iyrXE=\",\"ct\":\"1NSnxQERyQnU7rBTq51nDd+pq2Y/mM0nGYjwFor1J//r+iq0DymSlscyXVUUEofxQX/jcPIo14/2J0dkOlK8mf7cFdYb9el8\"}"
+    },
+
+    {
+      "username": "eddiem",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Eddie Mbango",
+      "role": "Transporter",
+      "privateKey": "c7b574990eac60b3a3d9937d93cfbcb73d49aed238e285eef2a1cf3704bd9d7f",
+      "publicKey": "03e30ca681ba50fad8c769b6f199704b1f714a2c131254e355c0b0bf31702982fd",
+      "encryptedKey": "{\"iv\":\"9yR7E7qB2BB6utgVGZuYjA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"ocG9duHAAGyxH8BT3rEudhFg1oTEnw/6RrXteoioujlQulF+2aVC/K5EF7/F+VP8zJxbRygVb+NaeFa/HmtcgDd4Bzave9uY\"}"
+    },
+
+    {
+      "username": "enzokuhle",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Enzokuhle Nkosi",
+      "role": "Transporter",
+      "privateKey": "f4914a8e7f7f7c2bca8fee83d1240dce2da8b61eff691f8005ee9179157fe49c",
+      "publicKey": "029a3c679062f0f36049639fd1af6e169542b35ca2e03bdceaa230036b16099195",
+      "encryptedKey": "{\"iv\":\"0F4ML++EoGVaP6om4FTq2w==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"I7v5hG5KJGQsNDegIpfBpfQaUnvVZ6mHqe/QNhgS9i98mMNyN2Vn04CbpZOXEQsQpAOTdrxGu6KSR8w1GKjvaXDAl/QqDgXa\"}"
+    },
+
+    {
+      "username": "elyf",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Elyf Mbambi",
+      "role": "Transporter",
+      "privateKey": "b2d7da581fe2ce829346be03533d5d724f8b5ced321cca90ae8ce91009576abe",
+      "publicKey": "028a88ed318d94f49bf7ec3a2f976385a0536b27931dec05adee34e95bb78804f2",
+      "encryptedKey": "{\"iv\":\"h2NqXSWHyV28oDg2Of3icg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"lZpVM3iyrXE=\",\"ct\":\"4vmgKQcrMrbMf5CqvZm6c3fvD6SggSp7EahXkDPE1035Q+56LSZcDcIuOwzv9UidD+In/Q/JlBD9a+HMQETgGcaTwpNt7O1+\"}"
+    },
+
+    {
+      "username": "heinrich",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Heinrich Von Gaertstag",
+      "role": "Transporter",
+      "privateKey": "05605051aceba1d41cbccff7db7251031537335f62b9aeecae8865856a4a5a08",
+      "publicKey": "03a835b57de13c8a761e8469b5f89a87330d57f551489599997fd01efe2c5be716",
+      "encryptedKey": "{\"iv\":\"HvC4cWzxRPlNu87iTWYqkA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"I972819vEI/EH9OMdCCSbM3Wob3ccX9qqiK1k5P02pSV5iHpZlHvgoVMTfMCtBzb91TyLY7P8puz85kkjVWD/J7hU74WRULx\"}"
+    },
+
+    {
+      "username": "ilunga",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Ilunga Alphonse",
+      "role": "Transporter",
+      "privateKey": "da8e789519cd36ced4b72ede7f41e56a1f9e62f3af96f481441f79ca8e0429e7",
+      "publicKey": "02485849490c55842f2a3e8169a5bcbd08e409f91d50edce5f3b1966ea1d2ddb0c",
+      "encryptedKey": "{\"iv\":\"+royMOWhJGVaB4LGgXECMw==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"PD5rtG/N3WbAvRg9ClyOlCU9oDvX1pjZmaEqsIv3qsQI0+A7WmPU1GaCqWIkVw7LlQLr4jCTc2q6NkSeaYKbF4s7uKZZMVBJ\"}"
+    },
+
+    {
+      "username": "jeffrey",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Jeffrey Hussar",
       "role": "Chemical Processor",
-      "password": "processor",
-      "privateKey": "304117a62b8b83b5cb9f53157a31cd6c7191cebb0b125815c2466824737017ca",
-      "encryptedKey": "{\"iv\":\"UwKW/vdxjJCW964hwW3DOg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"xeAYFLyv1RE=\",\"ct\":\"1T287QvaB+9GwhTfglQ9qgCgbbZoyxsPGVbMMxHgMN9UYru28dDDHXQg0He73ECeO/6Y/iEBbnlJzs0fq6HwHwB/8aKErR0O\"}",
-      "hashedPassword": "2CW+b/1MmieozC8m5KO5W8h6j0MonKRn0GTVRMUJ+Os="
+      "privateKey": "c655eb2b277288daa630cad4f275d8cc9ebfc6fb6fb2ef0eec86659eb1f42442",
+      "publicKey": "0204ef93eb4dc842af2a9700dfbefa95bf9b82e449ab254d11d947c4572c332cae",
+      "encryptedKey": "{\"iv\":\"+9jKgh2TqW39U/LpH/woxA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"lZpVM3iyrXE=\",\"ct\":\"Ff5cZYf4dUWAqRM6MbHgBx9xOfi8C+ElUU07VDJWXosTCA60AlU38iQ9PdAoUZTxORq+WPTLXDNMCAYW4cOg8asKgKpVrNlk\"}"
+    },
+
+    {
+      "username": "jean-freddie",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Jean-Freddie Masulisi",
+      "role": "Transporter",
+      "privateKey": "f61905e6083ab902d5ef7ad7bb824737de026a115ed60102b2dc1bc86e02683a",
+      "publicKey": "029e6994eaa0513e79197380f56856cba706a6687c7d8ba75c9d4420866d6a7c4d",
+      "encryptedKey": "{\"iv\":\"MB6ZMuq27LxXwUBVi7kuSg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"lZpVM3iyrXE=\",\"ct\":\"NgUIPT9EjQIClJL/Rvf9E5yJYK2iXe0VZgsQvjAQ4IXJMDFMJKZ4fiQOGlBPpJ1YKTnt3t5j5YBswVm6YKEQ6+FoEBFulQat\"}"
+    },
+
+    {
+      "username": "jean-gilbert",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Jean-Gilbert Ilunga",
+      "role": "Smelter",
+      "privateKey": "c2c3bb5c1f6c84390209d855e586cad7cab80ca45febf034e26424c3195e9420",
+      "publicKey": "03fadadab9f57ed2cbc7f2ace804e467d091949cde73729b4618d4cddefdd9fcfc",
+      "encryptedKey": "{\"iv\":\"tAeZKW02CsC+CP3FJR6RmQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"TELzMG5JpnGZv6pA5Iz3AnKmkkGEobU2rXiDtuYx5AQpTLVhguwlz5VzL/HUN/+TIxzv/A4cxtXjKaJIVGsQ25lvi4xV/Aw0\"}"
+    },
+
+    {
+      "username": "kabila",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Kabila Sylvain",
+      "role": "Customs Officer",
+      "privateKey": "326450f36332caa054a06e05dcabf0a79e1769d493bdea192d8a06f820c1c58e",
+      "publicKey": "03d751151a244e482c4e228d1e079f4bedbe0cc58640451dc6e98c711c8ae32e6d",
+      "encryptedKey": "{\"iv\":\"sCms1rrhMTNwg4AH9T5Qsw==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"lZpVM3iyrXE=\",\"ct\":\"79nTDLWMgiW46CUfl9+IA+kk3qSYsJn/wX5uPV6XkOdZjc5RXR1ttg9D92nbT863LeHV0KESt+xYAbyU7TrtaHc3NlkucGr5\"}"
+    },
+
+    {
+      "username": "lengo",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Lengo Nginga",
+      "role": "Transporter",
+      "privateKey": "ee0a95014839e4fb7687cd8b8e00f5d5fd608e2620b8a8795a87d845310895b9",
+      "publicKey": "03f534fa04b936471b506a5a366355e6ad7a3906c3be65e2a789c356cceaed774f",
+      "encryptedKey": "{\"iv\":\"e+7VwuHhqJi6ha4kIAkv2g==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"CNhQQqLAjLOtfDrUNszJjM9YoGu9BJW8O0KayQHDDDFejw+sfMjPg4IwN4l56uyxwTU7zjmy/yU0vABKYBnu80GTAEJezFZ5\"}"
+    },
+
+    {
+      "username": "mukalay",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Mukalay Prosper",
+      "role": "Transporter",
+      "privateKey": "f28b8ec9d67e57f391ed1ca416fb299486affb4e87eaaa36a14f132b6cbdb268",
+      "publicKey": "0211957d5493b09a259cc372bbbe5d209c315a5393aa4e80cd62a592e314969e17",
+      "encryptedKey": "{\"iv\":\"V9/zIcvSDrQiSTIOmiCU0g==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"u1hOzh38zY4X3qak14/+4Z6KTHe9serKiB7sNsRb8rkapbjdnCGm8P3S6Lvomt1IJBUBeZjr/wqE5jgJhNJ9jeQKOgA6WpXG\"}"
+    },
+
+    {
+      "username": "mushaga",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Mushaga Lusa",
+      "role": "Negotiant",
+      "privateKey": "fdfba31f81b3e2481492822b79289966c0537b026ff89ac2c0793e6f832033cc",
+      "publicKey": "02e7f535a9b73343fae8f7007cb1ec2f5064bee961e01b1d0f5e4dbb55197228ff",
+      "encryptedKey": "{\"iv\":\"iRMYCGKwr6Yt5DSrQu46GQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"Z/h/x/fkULweB0IRPsd9GJafYIg+OEJ6AbwWneXe0teC2SvUYDJ9+UTQ7iIkT8hA25Em5UvJf++I4pZIfGwDII7xB6cij7nP\"}"
+    },
+
+    {
+      "username": "mwamba",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Mwamba Pascal",
+      "role": "Customs Officer",
+      "privateKey": "eb0ca757996c0a16696b3150cc34bb20b26aad0c09a176d6d81382860d7dac6a",
+      "publicKey": "0371b7a4c4deaed51efcdfe52f94aa638996a1cced98ab11b3de76e66042bf2e96",
+      "encryptedKey": "{\"iv\":\"tBsMs7P2WCvf0uZAyBzV+Q==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"U54NyP465DcUf+df43O1zS0yjkrk+d8HOIeqKp8EboSXhDVYUleyjc3NCxrHX+lKsVqmss6WNnJNCxQSztg+SLYcl0jxmgNn\"}"
+    },
+
+    {
+      "username": "mwanba",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Mwanba Kamomga",
+      "role": "Customs Officer",
+      "privateKey": "39c53d123229dce0a274a93d341361f09e248560f936a403709dd69c246b734f",
+      "publicKey": "03c9c32d3c21a5a47d70ad4bbace09b6176ce562ac3835a636d2b86a629776ca09",
+      "encryptedKey": "{\"iv\":\"vf22xdf0qxp5mYf+wN6IMQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"eaSpQgLRxZ12bo5gegX/rQG+2H5K5SyxhcrVgEKRP11tyZIHVc1qhLDw8T6EiGE1Y5u386OizLZfisX8FzcAZ1v00PEAYqQk\"}"
+    },
+
+    {
+      "username": "ngoy",
+      "password": "12345",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Ngoy Regine",
+      "role": "Miner",
+      "privateKey": "103bd9fca21c43a101c70ea0911ae5cbedf28121fbb6ae34b1046e3ab494d116",
+      "publicKey": "03a361c8c13b631913d0a7e64e3180708f4421a213c9624407e0ae12d2d5744673",
+      "encryptedKey": "{\"iv\":\"aWxDlqN2Q1crDXrkHqIrpQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"lZpVM3iyrXE=\",\"ct\":\"IBZgP0nwmyUJlNAC3OK7YZ/i4TffVG9YBoiEZSht4myVboMj+gmfNica/6HTO9uAgcbWD+3ZSag4zTu4F7zvr0/HYXN/CXoK\"}"
+    },
+
+    {
+      "username": "paulette",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Paulette Sides",
+      "role": "Customs Officer",
+      "privateKey": "6f566286b165d127acd939bc134f879b5cc71e32ff03255f8f23d73d48b9cc6e",
+      "publicKey": "03b4a7ce28820857d79f09fe795294aa324aec93e95e6a28438676d39de9b0b09f",
+      "encryptedKey": "{\"iv\":\"1R5c564X4ZcwFaN8wl+bnA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"wLlBy+vxwgtCGhKSSLvyQpaXW10OHi8FeINcfkbMj/m7aEiztusLzzEAJLmuWuHVuSnY2Q5/aBKs7egDkTE8k5OWxyfJqZHS\"}"
+    },
+
+    {
+      "username": "thomas",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Thomas Sinclair",
+      "role": "Transporter",
+      "privateKey": "29631c2a7b6d2c44928fd585ef542988314d2021348f1439dc0e897b7c22e6e3",
+      "publicKey": "03173a131116c6924115d408e560f0d1bd253bbfb5e57032ec7de1b783eda2cfef",
+      "encryptedKey": "{\"iv\":\"uxmnedAo+nhyJftz6xaFIQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"eK3fCjPlOZ2f2MwUI8W4XbDQ4GcZscQyqJMsfoeEXcgjra87ns73v3z9zeQ6mcFTVd7ydFB2hvJPX5++bjvX44LrYpgG1Kqq\"}"
+    },
+
+    {
+      "username": "vincent",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Vincent Fera",
+      "role": "Customs Officer",
+      "privateKey": "045cbeaae47776d08ce0f8e41ed3a0906fd4d9df4ca2bbcd87f370a52b301844",
+      "publicKey": "02d41d5271e3d6d33a74f1fcae08e8dac17d99370fa7cb8f74342da93706614be2",
+      "encryptedKey": "{\"iv\":\"z1H5tDmp95ILcn4LucQ2fQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"gc3szKS0bzwV+mA+Gqq9hOoomyQQAm63ZgWyPr0iFB3xaAz7RdDbF2u9ARC3riKzEKh5VRGi8HvkB5V0EOG55d9X8vNF+AFo\"}"
+    },
+
+    {
+      "username": "yose",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Yosé Bila",
+      "role": "Miner",
+      "privateKey": "f201a2883b8e4191a8b768383daa26cb149e57cb01093b5f57c9200ea1f0cc83",
+      "publicKey": "03b3df3a6582f99a8724162c7a055922c3fab294711440d8b505df16450e206b23",
+      "encryptedKey": "{\"iv\":\"KBBYQ8SfV5S4urCsfqdekg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"ckkrSbcU9SC51k7pUz1eFLNavA/0NnKbVYcWBr5sWTPt1HhXPQuudX2l/XMBXfzIXsQHaEv/rO0k9uyXhE+7LWwlkiIpcwpE\"}"
+    },
+
+    {
+      "username": "yvonne",
+      "password": "12345",
+      "hashedPassword": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "name": "Yvonne Kusuamina",
+      "role": "Customs Officer",
+      "privateKey": "9d3303deca0ad7a36c546d6362900acee391d255972865e35c74f0c3fd1a4652",
+      "publicKey": "03b1cbaf16b509c9e33c600c3c9eae65ad439e50df59b88c62c24a7bd5ee8f6ace",
+      "encryptedKey": "{\"iv\":\"Ubgzfgy+tSYyhSsbtZnIqg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"rfrc8OwRS3w=\",\"ct\":\"YtbejHPRUtzARn4Sq/Yyx56T81amcAL/Yi2Q7ezuSgzXcJydQutOudPAZ/BCKgFYISsncvj6oxZGwy4opRW8RuBSIjxgEA6y\"}"
     }
   ]
 }
